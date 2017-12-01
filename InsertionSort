@@ -1,0 +1,22 @@
+ static void swap (ArrayList<String> list, int i, int j) {
+
+	String t = list.get(i);
+	list.set(i,list.get(j));
+	list.set(j,t);
+    }
+
+    static void insertionSort(ArrayList<String> list) {
+
+	for (int i=1; i<list.size(); ++i)
+		insert(list, i);
+    }
+
+    static void insert(ArrayList<String> list, int i) {
+	
+	    while (i>0){
+		String[]a=list.get(i).split(",");
+		String[]b=list.get(i-1).split(",");
+		if (a[1].compareTo(b[1])<0)
+		    swap (list,i,(i-1));
+		i--;	
+	    }
