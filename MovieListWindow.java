@@ -40,7 +40,7 @@ public class MovieListWindow extends JDialog{
 		//this is where we'd call a Movie method that would return the
 		//movie array list in alphabetical order and input it into
 		//parameters below
-		//so: create an	ArrayList<Movie> alpha = callAlphaorder();
+		ArrayList<Movie> alpha = callAlphaorder(ArrayList<Movie> movie);
 		Table table = new Table();
 		table.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		table.setSize(500, 500);
@@ -67,6 +67,9 @@ public class MovieListWindow extends JDialog{
 
 	    }
 	    
+	}
+	public void callAlphaorder(ArrayList<Movie> movie){
+		
 	}
     }
     
