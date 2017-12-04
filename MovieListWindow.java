@@ -68,8 +68,24 @@ public class MovieListWindow extends JDialog{
 	    }
 	    
 	}
-	public void callAlphaorder(ArrayList<Movie> movie){
-		
+	public void callAlphaorder(ArrayList<Movie> movie, int i){
+		while (i>0){
+		String[]a=movie.title.get(i);
+		String[]b=movie.title.get(i-1);
+		if (a[1].compareTo(b[1])<0)
+		    swap (movie.title,i,(i-1));
+		i--;	
+	}	
+	}
+	public void swap (ArrayList<Movie> movie, int i, int j) {
+	    Movie m = movie.title.get(i);
+	    movie.title.set(i,movie.title.get(j));
+	    movie.title.set(j,t);
+	} 
+	static void insertionSort(ArrayList<Movie> movie) {
+
+	for (int i=1; i<movie.size(); ++i)
+		insert(movie.title, i);
 	}
     }
     
